@@ -1,4 +1,3 @@
-Project name
 # LightPath
 
 ## Abstract
@@ -7,16 +6,14 @@ LightPath is an application used to find routes through the city that are well l
 Accessibility
 ## The development tools used to build the project
 - Golang (Backend)
-- Vue.js - Frontend
-## SDKs used in the project
-- 
-- Leaflet
-- Stamen (Map Times)
+- Vue.js (Frontend)
 
 ## APIs used in the project
-- OPENCAGE for geolocation
+- OPENCAGE (geolocation)
 
-Any assets used in the project
-Any libraries used in the project
-Any components not created at the hackathon
-Licence/s
+## Any libraries used in the project
+- Leaflet (Frontend Maps)
+- Stamen (Map Tiles)
+- Vuetify (Component Library)
+## Licence/s
+MIT
