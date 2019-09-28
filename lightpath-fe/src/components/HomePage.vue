@@ -32,6 +32,8 @@ export default {
 	methods: {
 		getData(params) {
 			this.data = dummyJson;
+			const map = document.getElementById('map');
+			map.scrollIntoView();
 		},
 		async getUserCoords() {
             navigator.geolocation.getCurrentPosition(async position => {

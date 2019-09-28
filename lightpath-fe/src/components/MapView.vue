@@ -35,7 +35,6 @@ export default {
 		},
 		data(geojson) {
 			if (geojson) {
-				// const firstCoordPair = Array.from(geojson.features[0].geometry.coordinates[0]);
 				this.drawMapRoute(geojson);
 				this.drawStartEndPoints(geojson);
 				this.fitZoomToRoute(geojson);
@@ -45,7 +44,7 @@ export default {
 	methods: {
 		initMap() {
 			this.$nextTick(() => {
-				this.map = new L.Map('map');
+				this.map = new L.Map('map', {zoomControl: false});
 				const tonerUrl = "http://tile.stamen.com/terrain/{Z}/{X}/{Y}.png";
 				const url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
 					return s.toLowerCase();
@@ -53,7 +52,7 @@ export default {
 				const basemap = L.tileLayer(url, {
 					subdomains: ['','a.','b.','c.','d.'],
 					minZoom: 0,
-					maxZoom: 20,
+					maxZoom: 17,
 					type: 'png',
 					attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
 				});
@@ -77,16 +76,17 @@ export default {
 		},
 		drawStartEndPoints(geojson) {
 			const firstLastCoords = this.getStartEndPoints(geojson);
-			const text = ["Start", "End"];
 			let i = 0;
 			for (let points of firstLastCoords) {
 				const circle = L.circle(points.reverse(), {
 					 color: "#F9971E",
-					 radius: 50,
+					 radius: 5,
 					 fillOpacity: 1,
 				});
 				circle.addTo(this.map);
-				circle.bindPopup(text[i], {closeOnClick: false, autoClose: false}).openPopup();
+				if (i === 0) {
+					circle.bindPopup("Start", {closeOnClick: false, autoClose: false}).openPopup();
+				}
 				i++;
 			}
 		},
