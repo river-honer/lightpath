@@ -1,33 +1,29 @@
 <template>
   <v-app>
-    <v-app-bar app>
+    <!-- Toolbar -->
+    <v-app-bar elevation="2" color="primary" app dense hide-on-scroll>
+      <v-spacer/>
       <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
+        <!-- <v-icon color="white" class="mr-2" large>mdi-gps_fixed</v-icon> -->
+        <span class="white--text font-weight-bold">LightPath</span>
       </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
+      <v-spacer/>
     </v-app-bar>
 
+    <!-- Content -->
     <v-content>
-      <HelloWorld/>
+      <home-page/>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import HomePage from './components/HomePage.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    HomePage,
   },
   data: () => ({
     //
