@@ -76,8 +76,8 @@ export default {
             }
             this.toCoords = await this.getCoordsFromAddress(this.toLocation);
             this.$emit('submit-form', {
-                fromLocation: this.fromCoords,
-                toLocation: this.toCoords,
+                fromLocation: this.fromCoords.reverse(),
+                toLocation: this.toCoords.reverse(),
             });
         }
     }
