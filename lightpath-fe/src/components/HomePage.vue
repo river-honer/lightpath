@@ -48,6 +48,7 @@ export default {
     async getData(params) {
       try {
         const bodyJson = await Webapi.findPath(params)
+        console.log(bodyJson)
         this.data = new Route(bodyJson);
       }
       catch (Error) {
