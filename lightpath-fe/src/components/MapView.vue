@@ -1,8 +1,6 @@
 <template>
 	<v-card id="map-card" class='mt-4'>
-		<v-container>
 			<div id="map"></div>
-		</v-container>
 	</v-card>
 </template>
 
@@ -58,8 +56,9 @@ export default {
 
 <style>
 
+
 #map {
-	height: 400px;
+	height: 90vh;
 }
 
 </style>

@@ -3,10 +3,10 @@
         <div v-if="messages.length > 0">
           <v-alert
             v-for="message in messages"
-            :key="message.key"
             v-model="message.display"
-            type="message.type"
-            dismissible="true"
+            :key="message.key"
+            :type="message.type"
+            :dismissible="true"
           >
             {{ message.content }}
           </v-alert>
@@ -46,13 +46,14 @@ export default {
   },
   methods: {
     async getData(params) {
+      console.log(params)
       try {
         const bodyJson = await Webapi.findPath(params)
-        console.log(bodyJson)
         this.data = new Route(bodyJson);
       }
-      catch (Error) {
-        this.makeMessage('error', 'Could not find route')
+      catch (TypeError) {
+        console.log(TypeError)
+        this.makeMessage({type: 'error', content: 'Could not find route'})
       }
     },
     async getUserCoords() {
@@ -61,12 +62,12 @@ export default {
         this.userCoords = coordArray;
       });
     },
-    makeMessage(type, content) {
+    makeMessage(options) {
       this.messages.push({
         key: this.messages.length,
         display: true,
-        type: type,
-        content: content,
+        type: options.type,
+        content: options.content,
       });
     },
   },

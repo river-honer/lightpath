@@ -5,9 +5,9 @@ const routeStyle = {
   weight: 5,
 };
 
-const startEndPointsStyle =  {
+const startEndPointsStyle = {
   color: '#F9971E',
-  radius: 5,
+  radius: 10,
   fillOpacity: 1,
 };
 

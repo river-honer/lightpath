@@ -59,18 +59,27 @@ export default {
   methods: {
     async getAddressfromCoords(coords) {
       const url = `https://api.opencagedata.com/geocode/v1/geojson?q=${coords[0]}+${coords[1]}&key=${OPENCAGE_API_KEY}`;
-      const response = await fetch(url);
-      const json = await response.json();
-      return json.features[0].properties.formatted;
+      try {
+        const response = await fetch(url);
+        const json = await response.json();
+        return json.features[0].properties.formatted;
+      } catch {
+        this.$emit('message', {type: 'error', content: 'Could not find address from coordinates'});
+      }
     },
     async getCoordsFromAddress(address) {
-      const url = `https://api.opencagedata.com/geocode/v1/geojson?q=${address}&key=${OPENCAGE_API_KEY}`;
-      const response = await fetch(url);
-      const json = await response.json();
-      const coords = json.features[0].geometry.coordinates;
-      return coords.reverse();
+      try {
+        const url = `https://api.opencagedata.com/geocode/v1/geojson?q=${address}&key=${OPENCAGE_API_KEY}`;
+        const response = await fetch(url);
+        const json = await response.json();
+        const coords = json.features[0].geometry.coordinates;
+        return coords.reverse();
+      } catch {
+        this.$emit('message', {type:'error', content: 'Could not find location for address'});
+      }
     },
     async submit() {
+      // Need to tighten this up
       // if form valid
       if (this.toLocation && this.fromLocation) {
         if (!this.fromCoords) {
@@ -82,10 +91,7 @@ export default {
           toLocation: this.toCoords.reverse(),
         });
       } else { // If form is not valid
-        this.$emit('submit-form', {
-          toLocation: [-0.1, 51.543],
-          fromLocation: [-1.025, 50.298],
-        });
+        console.log('fields empty')
       }
     },
   },
