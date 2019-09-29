@@ -34,7 +34,7 @@ export default {
     data(route) {
       if (route) {
         this.map.drawRoute(route);
-		this.map.fitZoomToRoute([route.startPoint, route.endPoint]);
+		    this.map.fitZoomToRoute([route.startPoint, route.endPoint]);
 
         // Scroll map in to view
         const mapDiv = document.getElementById('map');

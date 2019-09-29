@@ -1,5 +1,10 @@
 export default class Route {
   constructor(geojson) {
+    // Validate response body is valid path
+    if (geojson.features[0].geometry.coordinates.length === 1) {
+      throw new Error('No line, only point');
+    }
+
     this.geojson = geojson;
     this.startPoint = Route.getStartPoint(geojson);
     this.endPoint = Route.getEndPoint(geojson);

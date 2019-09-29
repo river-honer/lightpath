@@ -46,13 +46,11 @@ export default {
   },
   methods: {
     async getData(params) {
-      console.log(params)
       try {
         const bodyJson = await Webapi.findPath(params)
         this.data = new Route(bodyJson);
       }
-      catch (TypeError) {
-        console.log(TypeError)
+      catch {
         this.makeMessage({type: 'error', content: 'Could not find route'})
       }
     },

@@ -79,7 +79,6 @@ export default {
       }
     },
     async submit() {
-      // Need to tighten this up
       // if form valid
       if (this.toLocation && this.fromLocation) {
         if (!this.fromCoords) {
@@ -91,7 +90,7 @@ export default {
           toLocation: this.toCoords.reverse(),
         });
       } else { // If form is not valid
-        console.log('fields empty')
+        this.$emit('message', {type: 'error', content: "Fields incomplete"})
       }
     },
   },
