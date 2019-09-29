@@ -71,14 +71,22 @@ export default {
       return coords.reverse();
     },
     async submit() {
-      if (!this.fromCoords) {
-        this.fromCoords = await this.getCoordsFromAddress(this.fromLocation);
+      // if form valid
+      if (this.toLocation && this.fromLocation) {
+        if (!this.fromCoords) {
+          this.fromCoords = await this.getCoordsFromAddress(this.fromLocation);
+        }
+        this.toCoords = await this.getCoordsFromAddress(this.toLocation);
+        this.$emit('submit-form', {
+          fromLocation: this.fromCoords.reverse(),
+          toLocation: this.toCoords.reverse(),
+        });
+      } else { // If form is not valid
+        this.$emit('submit-form', {
+          toLocation: [-0.1, 51.543],
+          fromLocation: [-1.025, 50.298],
+        });
       }
-      this.toCoords = await this.getCoordsFromAddress(this.toLocation);
-      this.$emit('submit-form', {
-        fromLocation: this.fromCoords.reverse(),
-        toLocation: this.toCoords.reverse(),
-      });
     },
   },
 };

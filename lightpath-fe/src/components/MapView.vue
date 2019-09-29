@@ -33,11 +33,17 @@ export default {
         this.updateMapCenter(value);
       }
     },
-    data(geojson) {
-      if (geojson) {
-        this.drawMapRoute(geojson);
-        this.drawStartEndPoints(geojson);
-        this.fitZoomToRoute(geojson);
+    data(route) {
+      if (route) {
+        this.drawMapRoute(route.geojson);
+        this.drawStartEndPoints([route.startPoint, route.endPoint]);
+		this.fitZoomToRoute([route.startPoint, route.endPoint]);
+
+        // Scroll map in to view
+        const map = document.getElementById('map');
+        if (map) {
+          map.scrollIntoView();
+        }
       }
     },
   },
@@ -50,7 +56,7 @@ export default {
         const basemap = L.tileLayer(url, {
           subdomains: ['', 'a.', 'b.', 'c.', 'd.'],
           minZoom: 0,
-          maxZoom: 16,
+          maxZoom: 17,
           type: 'png',
           attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>',
         });
@@ -61,9 +67,8 @@ export default {
     updateMapCenter(coords) {
       this.map.setView(coords, 14);
     },
-    fitZoomToRoute(geojson) {
-      const firstLastCoords = this.getStartEndPoints(geojson);
-      this.map.fitBounds(firstLastCoords);
+    fitZoomToRoute(startEndPoints) {
+      this.map.fitBounds(startEndPoints);
     },
     drawMapRoute(geojson) {
       const routeStyle = {
@@ -72,25 +77,20 @@ export default {
       };
       const routeLayer = L.geoJSON(geojson, routeStyle).addTo(this.map);
     },
-    drawStartEndPoints(geojson) {
-      const firstLastCoords = this.getStartEndPoints(geojson);
-      let i = 0;
-      for (const points of firstLastCoords) {
-        const circle = L.circle(points.reverse(), {
+    drawStartEndPoints(startEndPoints) {
+	//   let i = 0;
+	// if (i === 0) {
+	//   circle.bindPopup('Start', { closeOnClick: false, autoClose: false }).openPopup();
+	// }
+	// i++;
+      for (const point of startEndPoints) {
+        const circle = L.circle(point.reverse(), {
 					 color: '#F9971E',
 					 radius: 5,
 					 fillOpacity: 1,
         });
         circle.addTo(this.map);
-        if (i === 0) {
-          circle.bindPopup('Start', { closeOnClick: false, autoClose: false }).openPopup();
-        }
-        i++;
       }
-    },
-    getStartEndPoints(geojson) {
-      const coords = geojson.features[0].geometry.coordinates;
-      return [coords[0], coords[coords.length - 1]];
     },
   },
 };
