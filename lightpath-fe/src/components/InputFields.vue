@@ -21,7 +21,7 @@
             </v-row>
             <v-row no-gutters>
                     <v-spacer/>
-                    <v-btn 
+                    <v-btn
                         @click="submit()"
                         color="primary"
                     >Go</v-btn>
@@ -31,55 +31,55 @@
 </template>
 
 <script>
-const OPENCAGE_API_KEY= '15f9a2399c8c4abea6c2251bcbbb4755';
+const OPENCAGE_API_KEY = '15f9a2399c8c4abea6c2251bcbbb4755';
 
 export default {
-    name:"input-fields",
-    data() {
-        return {
-            fromLocation: null,
-            toLocation: null,
-            fromCoords: null,
-            toCoords: null,
-        }
+  name: 'input-fields',
+  data() {
+    return {
+      fromLocation: null,
+      toLocation: null,
+      fromCoords: null,
+      toCoords: null,
+    };
+  },
+  props: {
+    userCoords: {
+      type: undefined,
     },
-    props: {
-        userCoords: {
-            type: undefined,
-        },
+  },
+  watch: {
+    async userCoords(value) {
+      if (value) {
+        this.fromCoords = value;
+        this.fromLocation = await this.getAddressfromCoords(value);
+      }
     },
-    watch: {
-        async userCoords(value) {
-            if (value) {
-                this.fromCoords = value;
-                this.fromLocation = await this.getAddressfromCoords(value);
-            }
-        },
+  },
+  methods: {
+    async getAddressfromCoords(coords) {
+      const url = `https://api.opencagedata.com/geocode/v1/geojson?q=${coords[0]}+${coords[1]}&key=${OPENCAGE_API_KEY}`;
+      const response = await fetch(url);
+      const json = await response.json();
+      return json.features[0].properties.formatted;
     },
-    methods: {
-        async getAddressfromCoords(coords) {
-            const url = `https://api.opencagedata.com/geocode/v1/geojson?q=${coords[0]}+${coords[1]}&key=${OPENCAGE_API_KEY}`
-            const response  = await fetch(url)
-            const json = await response.json();
-            return json.features[0].properties.formatted;
-        },
-        async getCoordsFromAddress(address) {
-            const url = `https://api.opencagedata.com/geocode/v1/geojson?q=${address}&key=${OPENCAGE_API_KEY}`
-            const response  = await fetch(url)
-            const json = await response.json();
-            const coords = json.features[0].geometry.coordinates
-            return coords.reverse();
-        },
-        async submit() {
-            if (!this.fromCoords) {
-                this.fromCoords = await this.getCoordsFromAddress(this.fromLocation);
-            }
-            this.toCoords = await this.getCoordsFromAddress(this.toLocation);
-            this.$emit('submit-form', {
-                fromLocation: this.fromCoords.reverse(),
-                toLocation: this.toCoords.reverse(),
-            });
-        }
-    }
-}
+    async getCoordsFromAddress(address) {
+      const url = `https://api.opencagedata.com/geocode/v1/geojson?q=${address}&key=${OPENCAGE_API_KEY}`;
+      const response = await fetch(url);
+      const json = await response.json();
+      const coords = json.features[0].geometry.coordinates;
+      return coords.reverse();
+    },
+    async submit() {
+      if (!this.fromCoords) {
+        this.fromCoords = await this.getCoordsFromAddress(this.fromLocation);
+      }
+      this.toCoords = await this.getCoordsFromAddress(this.toLocation);
+      this.$emit('submit-form', {
+        fromLocation: this.fromCoords.reverse(),
+        toLocation: this.toCoords.reverse(),
+      });
+    },
+  },
+};
 </script>

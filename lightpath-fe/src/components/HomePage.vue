@@ -14,33 +14,35 @@
 <script>
 import InputFields from './InputFields';
 import MapView from './MapView';
+import Route from '../models/route';
 import { dummyJson } from '../constants';
 
 export default {
-	name: "home-page",
-	components: {
-		InputFields,
-		MapView,
-	},
-	data: () => ({
-		data: undefined,
-		userCoords: null,
-	}),
-	mounted() {
-		this.getUserCoords();
-	},
-	methods: {
-		getData(params) {
-			this.data = dummyJson;
-			const map = document.getElementById('map');
-			map.scrollIntoView();
-		},
-		async getUserCoords() {
-            navigator.geolocation.getCurrentPosition(async position => {
-                const coordArray = [position.coords.latitude, position.coords.longitude]
-                this.userCoords = coordArray;
-            });
-        },
-	}
+  name: 'home-page',
+  components: {
+    InputFields,
+    MapView,
+  },
+  data: () => ({
+    data: undefined,
+    userCoords: null,
+  }),
+  mounted() {
+    this.getUserCoords();
+  },
+  methods: {
+    getData(params) {
+      this.data = new Route(dummyJson);
+
+      const map = document.getElementById('map');
+      map.scrollIntoView();
+    },
+    async getUserCoords() {
+      navigator.geolocation.getCurrentPosition(async (position) => {
+        const coordArray = [position.coords.latitude, position.coords.longitude];
+        this.userCoords = coordArray;
+      });
+    },
+  },
 };
 </script>
