@@ -1,52 +1,41 @@
 <template>
-    <v-card>
-        <v-container>
-            <v-row no-gutters>
-                <v-flex sm-12>
-                    <v-text-field
-                        v-model="fromLocation"
-                        outlined
-                        label="Start"
-                    />
-                </v-flex>
-            </v-row>
-            <v-row no-gutters>
-                <v-flex sm-12>
-                    <v-text-field
-                        v-model="toLocation"
-                        outlined
-                        label="End"
-                    />
-                </v-flex>
-            </v-row>
-            <v-row no-gutters>
-                    <v-spacer/>
-                    <v-btn
-                        @click="submit()"
-                        color="primary"
-                    >Go</v-btn>
-            </v-row>
-        </v-container>
-    </v-card>
+  <v-card>
+    <v-container>
+      <v-row no-gutters>
+        <v-flex sm-12>
+          <v-text-field v-model="fromLocation" outlined label="Start" />
+        </v-flex>
+      </v-row>
+      <v-row no-gutters>
+        <v-flex sm-12>
+          <v-text-field v-model="toLocation" outlined label="End" />
+        </v-flex>
+      </v-row>
+      <v-row no-gutters>
+        <v-spacer />
+        <v-btn @click="submit()" color="primary">Go</v-btn>
+      </v-row>
+    </v-container>
+  </v-card>
 </template>
 
 <script>
-const OPENCAGE_API_KEY = '15f9a2399c8c4abea6c2251bcbbb4755';
+const OPENCAGE_API_KEY = "15f9a2399c8c4abea6c2251bcbbb4755";
 
 export default {
-  name: 'input-fields',
+  name: "input-fields",
   data() {
     return {
       fromLocation: null,
       toLocation: null,
       fromCoords: null,
-      toCoords: null,
+      toCoords: null
     };
   },
   props: {
     userCoords: {
-      type: undefined,
-    },
+      type: undefined
+    }
   },
   watch: {
     async userCoords(value) {
@@ -54,17 +43,22 @@ export default {
         this.fromCoords = value;
         this.fromLocation = await this.getAddressfromCoords(value);
       }
-    },
+    }
   },
   methods: {
     async getAddressfromCoords(coords) {
-      const url = `https://api.opencagedata.com/geocode/v1/geojson?q=${coords[0]}+${coords[1]}&key=${OPENCAGE_API_KEY}`;
+      const url = `https://api.opencagedata.com/geocode/v1/geojson?q=${
+        coords[0]
+      }+${coords[1]}&key=${OPENCAGE_API_KEY}`;
       try {
         const response = await fetch(url);
         const json = await response.json();
         return json.features[0].properties.formatted;
       } catch {
-        this.$emit('message', {type: 'error', content: 'Could not find address from coordinates'});
+        this.$emit("message", {
+          type: "error",
+          content: "Could not find address from coordinates"
+        });
       }
     },
     async getCoordsFromAddress(address) {
@@ -75,7 +69,10 @@ export default {
         const coords = json.features[0].geometry.coordinates;
         return coords.reverse();
       } catch {
-        this.$emit('message', {type:'error', content: 'Could not find location for address'});
+        this.$emit("message", {
+          type: "error",
+          content: "Could not find location for address"
+        });
       }
     },
     async submit() {
@@ -85,14 +82,23 @@ export default {
           this.fromCoords = await this.getCoordsFromAddress(this.fromLocation);
         }
         this.toCoords = await this.getCoordsFromAddress(this.toLocation);
-        this.$emit('submit-form', {
-          fromLocation: this.fromCoords.reverse(),
-          toLocation: this.toCoords.reverse(),
-        });
-      } else { // If form is not valid
-        this.$emit('message', {type: 'error', content: "Fields incomplete"})
+        const res = {
+          fromLocation:
+            this.fromCoords[0] > this.fromCoords[1]
+              ? this.fromCoords
+              : this.fromCoords.reverse(),
+          toLocation:
+            this.toCoords[0] > this.toCoords[1]
+              ? this.toCoords
+              : this.toCoords.reverse()
+        };
+        console.log("res", res);
+        this.$emit("submit-form", res);
+      } else {
+        // If form is not valid
+        this.$emit("message", { type: "error", content: "Fields incomplete" });
       }
-    },
-  },
+    }
+  }
 };
 </script>

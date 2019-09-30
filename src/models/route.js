@@ -1,6 +1,7 @@
 export default class Route {
-  constructor(geojson) {
+  constructor(data) {
     // Validate response body is valid path
+    const geojson = data.data;
     if (geojson.features[0].geometry.coordinates.length === 1) {
       throw new Error('No line, only point');
     }
