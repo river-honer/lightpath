@@ -38,6 +38,7 @@ export default {
   },
   data: () => ({
     data: undefined,
+    distance: null,
     userCoords: null,
     messages: [],
   }),
@@ -48,7 +49,8 @@ export default {
     async getData(params) {
       try {
         const bodyJson = await Webapi.findPath(params)
-        this.data = new Route(bodyJson);
+        this.distance = bodyJson.distance;
+        this.data = new Route(bodyJson.data);
       }
       catch {
         this.makeMessage({type: 'error', content: 'Could not find route'})

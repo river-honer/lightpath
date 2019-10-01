@@ -10,7 +10,7 @@ export default class Webapi {
      *   fromLocation: [Number, Number]
      * }
      */
-    console.log(JSON.stringify(params))
+    console.log(JSON.stringify(params));
     const response = await fetch(FINDPATH_API_URL, {
       method: 'POST',
       body: JSON.stringify(params),
