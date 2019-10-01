@@ -58,7 +58,7 @@ export default {
   },
   methods: {
     async getAddressfromCoords(coords) {
-      const url = `https://api.opencagedata.com/geocode/v1/geojson?q=${coords[0]}+${coords[1]}&key=${OPENCAGE_API_KEY}`;
+      const url = `//api.opencagedata.com/geocode/v1/geojson?q=${coords[0]}+${coords[1]}&key=${OPENCAGE_API_KEY}`;
       try {
         const response = await fetch(url);
         const json = await response.json();
@@ -69,7 +69,7 @@ export default {
     },
     async getCoordsFromAddress(address) {
       try {
-        const url = `https://api.opencagedata.com/geocode/v1/geojson?q=${address}&key=${OPENCAGE_API_KEY}`;
+        const url = `//api.opencagedata.com/geocode/v1/geojson?q=${address}&key=${OPENCAGE_API_KEY}`;
         const response = await fetch(url);
         const json = await response.json();
         const coords = json.features[0].geometry.coordinates;
