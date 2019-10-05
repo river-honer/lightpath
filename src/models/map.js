@@ -15,7 +15,7 @@ export default class Map extends L.Map {
   constructor(id, params) {
     super(id, params);
     // Custom Map Setup
-    const tonerUrl = '//tile.stamen.com/terrain/{Z}/{X}/{Y}.png';
+    const tonerUrl = 'http://tile.stamen.com/terrain/{Z}/{X}/{Y}.png';
     const url = tonerUrl.replace(/({[A-Z]})/g, s => s.toLowerCase());
     const basemap = L.tileLayer(url, {
       subdomains: ['', 'a.', 'b.', 'c.', 'd.'],
@@ -30,7 +30,9 @@ export default class Map extends L.Map {
 
   drawRoute(route) {
     L.geoJSON(route.geojson, routeStyle).addTo(this);
-    this.drawStartEndPoints([route.startPoint, route.endPoint]);
+    if (route.startPoint && route.endPoint) {
+      this.drawStartEndPoints([route.startPoint, route.endPoint]);
+    }
   }
 
   drawStartEndPoints(startEndPoints) {

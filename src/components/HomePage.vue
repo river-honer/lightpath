@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-card flat>
+        <v-card>
           <v-container>
             <alerts
               :messages="messages"
@@ -18,7 +18,6 @@
           :data="mapData"
           v-on:message="makeMessage"
         />
-
     </div>
 </template>
 
