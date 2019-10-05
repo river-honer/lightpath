@@ -1,7 +1,7 @@
 <template>
-	<v-card id="map-card" class='mt-4'>
+	<div id="map-card" class='mt-n4'>
 			<div id="map"></div>
-	</v-card>
+	</div>
 </template>
 
 <script>

@@ -1,32 +1,31 @@
 <template>
-    <v-container>
-        <div v-if="messages.length > 0">
-          <v-alert
-            v-for="message in messages"
-            v-model="message.display"
-            :key="message.key"
-            :type="message.type"
-            :dismissible="true"
-          >
-            {{ message.content }}
-          </v-alert>
-        </div>
-        <input-fields
-          :user-coords="userCoords"
-          v-on:submit-form="getData"
-          v-on:message="makeMessage"
-        />
+    <div>
+        <v-card>
+          <v-container>
+            <alerts
+              :messages="messages"
+            />
+            <input-fields
+              :user-coords="userCoords"
+              v-on:submit-form="getData"
+              v-on:message="makeMessage"
+            />
+          </v-container>
+        </v-card>
+
         <map-view
           :user-coords="userCoords"
-          :data="data"
+          :data="mapData"
           v-on:message="makeMessage"
         />
-    </v-container>
+
+    </div>
 </template>
 
 <script>
 import InputFields from './InputFields';
 import MapView from './MapView';
+import Alerts from './Alerts';
 import Route from '../models/route';
 import Webapi from '../webapi';
 
@@ -35,9 +34,10 @@ export default {
   components: {
     InputFields,
     MapView,
+    Alerts,
   },
   data: () => ({
-    data: undefined,
+    mapData: undefined,
     distance: null,
     userCoords: null,
     messages: [],
@@ -50,7 +50,7 @@ export default {
       try {
         const bodyJson = await Webapi.findPath(params)
         this.distance = bodyJson.distance;
-        this.data = new Route(bodyJson.data);
+        this.mapData = new Route(bodyJson.data);
       }
       catch {
         this.makeMessage({type: 'error', content: 'Could not find route'})

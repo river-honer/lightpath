@@ -1,33 +1,31 @@
 <template>
-    <v-card>
-        <v-container>
-            <v-row no-gutters>
-                <v-flex sm-12>
-                    <v-text-field
-                        v-model="fromLocation"
-                        outlined
-                        label="Start"
-                    />
-                </v-flex>
-            </v-row>
-            <v-row no-gutters>
-                <v-flex sm-12>
-                    <v-text-field
-                        v-model="toLocation"
-                        outlined
-                        label="End"
-                    />
-                </v-flex>
-            </v-row>
-            <v-row no-gutters>
-                    <v-spacer/>
-                    <v-btn
-                        @click="submit()"
-                        color="primary"
-                    >Go</v-btn>
-            </v-row>
-        </v-container>
-    </v-card>
+  <v-container>
+    <v-row no-gutters>
+        <v-flex sm-12>
+            <v-text-field
+                v-model="fromLocation"
+                outlined
+                label="Start"
+            />
+        </v-flex>
+    </v-row>
+    <v-row no-gutters>
+        <v-flex sm-12>
+            <v-text-field
+                v-model="toLocation"
+                outlined
+                label="End"
+            />
+        </v-flex>
+    </v-row>
+    <v-row no-gutters>
+            <v-spacer/>
+            <v-btn
+                @click="submit()"
+                color="primary"
+            >Go</v-btn>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
