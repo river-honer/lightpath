@@ -12,10 +12,8 @@ Accessibility & Community
 - Golang (Backend)
 - Vue.js (Frontend)
 
-## LightPath Backend
-The backend is a go project who's github is here [https://github.com/cryptoqween/we-travel-backend](https://github.com/cryptoqween/we-travel-backend)
-
-### Pathfinding Algorithm Demo
+## LightPath Backend Repo
+The backend is a Go project who's github is here [https://github.com/cryptoqween/we-travel-backend](https://github.com/cryptoqween/we-travel-backend)
 
 ## Design Proposal
 https://www.behance.net/gallery/86223243/BrightPath-Safe-route-finder
