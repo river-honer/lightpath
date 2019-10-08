@@ -9,15 +9,11 @@
 - Limited to London due to memory constraints of the free tier of heroku.
 - Your live location will be updated regularly if you are walking or cycling.
 
-[![button_demo](https://user-images.githubusercontent.com/1690659/66333882-c63afc80-e92f-11e9-8768-1fcdd4411359.png)](https://brightpath-fe.web.app)
-
 [
 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3036f386223243.5d932aa627487.png" alt="" data-canonical-src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3036f386223243.5d932aa627487.png" height="300" />
 ](https://brightpath-fe.web.app)[
 <img src="https://user-images.githubusercontent.com/1690659/66380361-30df4d00-e9af-11e9-8579-b569220ddea1.gif" alt="brightpath-demo" data-canonical-src="https://user-images.githubusercontent.com/1690659/66380361-30df4d00-e9af-11e9-8579-b569220ddea1.gif" height="300" />
 ](https://brightpath-fe.web.app)
-
-[![button_demo](https://user-images.githubusercontent.com/1690659/66333882-c63afc80-e92f-11e9-8768-1fcdd4411359.png)](https://brightpath-fe.web.app)
 
 ## Mission
 
