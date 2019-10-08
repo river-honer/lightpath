@@ -25,8 +25,22 @@ To provide the safest walking route between two locations.
 - If you are new to a city or travelling you are highly dependent on google maps for navigating safely between locations and you will often be on foot.
 - There has been a surge of people vying for a product which provides safe walking paths. Here are some [examples](https://twitter.com/Chlojob_/status/1181279485901099008?s=19) from twitter.
 
-<img src="https://user-images.githubusercontent.com/1690659/66380508-83b90480-e9af-11e9-9106-bb1c6ccc59d3.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/1690659/66380508-83b90480-e9af-11e9-9106-bb1c6ccc59d3.png" width="345" /><img src="https://user-images.githubusercontent.com/1690659/66380581-ac40fe80-e9af-11e9-9d36-9933462a1055.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/1690659/66380581-ac40fe80-e9af-11e9-9d36-9933462a1055.png" width="220" /><img src="https://user-images.githubusercontent.com/1690659/66380608-b95ded80-e9af-11e9-937a-013003f04360.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/1690659/66380608-b95ded80-e9af-11e9-937a-013003f04360.png" width="220" />
+<img src="https://user-images.githubusercontent.com/1690659/66380508-83b90480-e9af-11e9-9106-bb1c6ccc59d3.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/1690659/66380508-83b90480-e9af-11e9-9106-bb1c6ccc59d3.png" width="350" /><img src="https://user-images.githubusercontent.com/1690659/66380581-ac40fe80-e9af-11e9-9d36-9933462a1055.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/1690659/66380581-ac40fe80-e9af-11e9-9d36-9933462a1055.png" width="220" /><img src="https://user-images.githubusercontent.com/1690659/66380608-b95ded80-e9af-11e9-937a-013003f04360.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/1690659/66380608-b95ded80-e9af-11e9-937a-013003f04360.png" width="220" />
 
+
+## Blogs
+
+- [My first Hackathon as a UX/UI Designer, (Aristos)](https://medium.com/@aristos.michaelides/my-first-hackathon-as-a-ux-ui-designer-d7fbd7c34602)
+
+
+## Presentation 
+
+[Presentation slides can be found here](https://docs.google.com/presentation/d/e/2PACX-1vQI5T6knTUv9CPph-cnrhaS_v2JavzzSXZUsJ3H7ZK7uYJaJCTFg4jkwZA7ZjEFGw/pub?start=false&loop=false&delayms=3000)
+
+
+[
+<img src="https://user-images.githubusercontent.com/1690659/66381704-bb28b080-e9b1-11e9-95aa-8fe8bb799f0f.png" alt="" width="400" />
+](https://docs.google.com/presentation/d/e/2PACX-1vQI5T6knTUv9CPph-cnrhaS_v2JavzzSXZUsJ3H7ZK7uYJaJCTFg4jkwZA7ZjEFGw/pub?start=false&loop=false&delayms=3000)
 
 
 
