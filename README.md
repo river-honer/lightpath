@@ -16,7 +16,6 @@
 ](https://brightpath-fe.web.app)
 
 <p align="center">
-
 <img src="https://user-images.githubusercontent.com/1690659/66389489-66406680-e9c0-11e9-8434-309b1b72a63e.png" alt="brightpath-demo" data-canonical-src="https://user-images.githubusercontent.com/1690659/66389489-66406680-e9c0-11e9-8434-309b1b72a63e.png" height="345" />
 </p>
 
@@ -45,6 +44,7 @@ These were written as a follow up to the hackathon about our experience.
 ## Presentation 
 
 [Presentation slides can be found here](https://docs.google.com/presentation/d/e/2PACX-1vQI5T6knTUv9CPph-cnrhaS_v2JavzzSXZUsJ3H7ZK7uYJaJCTFg4jkwZA7ZjEFGw/pub?start=false&loop=false&delayms=3000)
+
 
 [
 <img src="https://user-images.githubusercontent.com/1690659/66381704-bb28b080-e9b1-11e9-95aa-8fe8bb799f0f.png" alt="" width="400" />
@@ -102,8 +102,9 @@ Steps taken to create backend
 
 We put together some [high fidelity mockups](https://www.behance.net/gallery/86223243/BrightPath-Safe-route-finder) of what the app could look like later on.
 
+<p align="center">
 <img src="https://user-images.githubusercontent.com/1690659/66382447-1c04b880-e9b3-11e9-8748-ee4ae7fb345f.gif" alt="" height="450" />
-
+</p>
 
 ## How it relates to Accessibility and Community
 
