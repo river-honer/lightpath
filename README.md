@@ -1,9 +1,9 @@
 # Brightpath
 
-## [Demo](https://brightpath-fe.web.app)
+## Demo
 
 ### Using the demo
-- [Here](https://brightpath-fe.web.app)
+- [Demo can be found here](https://brightpath-fe.web.app)
 - Click two points anywhere on the map of London.
 - The animation between points is just an animation, the response from the server is instant.
 - Limited to London due to memory constraints of the free tier of heroku.
