@@ -8,9 +8,9 @@ Click two points anywhere on the map of London.
 [![button_demo](https://user-images.githubusercontent.com/1690659/66333882-c63afc80-e92f-11e9-8768-1fcdd4411359.png)](https://brightpath-fe.web.app)
 
 [
-<img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3036f386223243.5d932aa627487.png" alt="" data-canonical-src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3036f386223243.5d932aa627487.png" width="200" />
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3036f386223243.5d932aa627487.png" alt="" data-canonical-src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3036f386223243.5d932aa627487.png" width="300" />
 ](https://brightpath-fe.web.app)[
-<img src="https://user-images.githubusercontent.com/1690659/66332818-807d3480-e92d-11e9-9c07-a35f045ef92e.gif" alt="" data-canonical-src="https://user-images.githubusercontent.com/1690659/66332818-807d3480-e92d-11e9-9c07-a35f045ef92e.gif" width="200" />
+<img src="https://user-images.githubusercontent.com/1690659/66332818-807d3480-e92d-11e9-9c07-a35f045ef92e.gif" alt="" data-canonical-src="https://user-images.githubusercontent.com/1690659/66332818-807d3480-e92d-11e9-9c07-a35f045ef92e.gif" width="300" />
 ](https://brightpath-fe.web.app)
 
 [![button_demo](https://user-images.githubusercontent.com/1690659/66333882-c63afc80-e92f-11e9-8768-1fcdd4411359.png)](https://brightpath-fe.web.app)
