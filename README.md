@@ -15,6 +15,12 @@
 <img src="https://user-images.githubusercontent.com/1690659/66380361-30df4d00-e9af-11e9-8579-b569220ddea1.gif" alt="brightpath-demo" data-canonical-src="https://user-images.githubusercontent.com/1690659/66380361-30df4d00-e9af-11e9-8579-b569220ddea1.gif" width="420" height="345" />
 ](https://brightpath-fe.web.app)
 
+<p align="center">
+[
+<img src="https://user-images.githubusercontent.com/1690659/66389489-66406680-e9c0-11e9-8434-309b1b72a63e.png" alt="brightpath-demo" data-canonical-src="https://user-images.githubusercontent.com/1690659/66389489-66406680-e9c0-11e9-8434-309b1b72a63e.png" height="345" />
+](https://brightpath-fe.web.app)
+</p>
+
 ## Mission
 
 To provide the safest walking route between two locations.
