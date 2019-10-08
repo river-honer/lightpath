@@ -102,6 +102,8 @@ We put together some [high fidelity mockups](https://www.behance.net/gallery/862
 
 ## How it relates to Accessibility and Community
 
+- Our solution is especially useful for those who are travelling and are not familiar with their new surroundings and therefore highly dependent on navigation apps.
+
 - Our solution makes travel more accessible for everyone. We made sure to inlcude minorities which are often overlooked. Our solution does not discriminate - it is for anyone that does not currently feel safe enough to go out at night (whether they are in a different continent, country, city or even an area they are not used to).  These can be individuals with ‘protected characteristics’ under the Equality Act (such as those that are disabled such as partially visually impaired, those with visible differences (such as ethnic minorities or gender) and invisible differences (such as LGBQT+)), but it can also be for any one else that feels vulnerable.
 
 - Our solution also empowers users to engage more with the local community.  For example, from our research there are a number of travellers who will ‘go out at night’, however they will use taxis to get from A to B because they do not feel safe to walk from the hotel to the venue (and/or back again).  I’m sure we all have stories of having some of the best nights when wander freely around a local area, meeting locals serendipitously.  Our app gives more people the opportunity to have impromptu connections with the local community, in more locations.
