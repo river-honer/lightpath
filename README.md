@@ -16,9 +16,8 @@
 ](https://brightpath-fe.web.app)
 
 <p align="center">
-[
+
 <img src="https://user-images.githubusercontent.com/1690659/66389489-66406680-e9c0-11e9-8434-309b1b72a63e.png" alt="brightpath-demo" data-canonical-src="https://user-images.githubusercontent.com/1690659/66389489-66406680-e9c0-11e9-8434-309b1b72a63e.png" height="345" />
-](https://brightpath-fe.web.app)
 </p>
 
 ## Mission
