@@ -10,9 +10,9 @@
 - Your live location will be updated regularly if you are walking or cycling.
 
 [
-<img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3036f386223243.5d932aa627487.png" alt="" data-canonical-src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3036f386223243.5d932aa627487.png" height="300" />
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3036f386223243.5d932aa627487.png" alt="" data-canonical-src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3036f386223243.5d932aa627487.png" height="345" />
 ](https://brightpath-fe.web.app)[
-<img src="https://user-images.githubusercontent.com/1690659/66380361-30df4d00-e9af-11e9-8579-b569220ddea1.gif" alt="brightpath-demo" data-canonical-src="https://user-images.githubusercontent.com/1690659/66380361-30df4d00-e9af-11e9-8579-b569220ddea1.gif" height="300" />
+<img src="https://user-images.githubusercontent.com/1690659/66380361-30df4d00-e9af-11e9-8579-b569220ddea1.gif" alt="brightpath-demo" data-canonical-src="https://user-images.githubusercontent.com/1690659/66380361-30df4d00-e9af-11e9-8579-b569220ddea1.gif" height="345" />
 ](https://brightpath-fe.web.app)
 
 ## Mission
@@ -23,7 +23,12 @@ To provide the safest walking route between two locations.
 
 - Google maps can often provide unsafe walking routes.
 - If you are new to a city or travelling you are highly dependent on google maps for navigating safely between locations and you will often be on foot.
-- There has been a surge of people vying for a product which provides safe walking paths. Here are [some](https://twitter.com) [examples](https://twitter.com) on [twitter](https://twitter.com).
+- There has been a surge of people vying for a product which provides safe walking paths. Here are some [examples](https://twitter.com/Chlojob_/status/1181279485901099008?s=19) from twitter.
+
+<img src="https://user-images.githubusercontent.com/1690659/66380508-83b90480-e9af-11e9-9106-bb1c6ccc59d3.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/1690659/66380508-83b90480-e9af-11e9-9106-bb1c6ccc59d3.png" width="345" /><img src="https://user-images.githubusercontent.com/1690659/66380581-ac40fe80-e9af-11e9-9d36-9933462a1055.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/1690659/66380581-ac40fe80-e9af-11e9-9d36-9933462a1055.png" width="220" /><img src="https://user-images.githubusercontent.com/1690659/66380608-b95ded80-e9af-11e9-937a-013003f04360.png" alt="" data-canonical-src="https://user-images.githubusercontent.com/1690659/66380608-b95ded80-e9af-11e9-937a-013003f04360.png" width="220" />
+
+
+
 
 ## Solution
 
@@ -33,9 +38,6 @@ Brightpath finds walking routes through the city that are well lit, avoiding dar
 
 ## Technical Solution
 
-- 
-- 
-- 
 
 ### [Backend github repository](https://github.com/mfbx9da4/brightpath-backend)
 
