@@ -54,7 +54,7 @@ Brightpath finds walking routes through the city that are well lit, avoiding dar
 
 [To use the routing in action, click any two locations on the map.](https://brightpath-fe.web.app) Note this is limited to London because of the limitations of heroku free plan. While we did optimize for space complexity there are over 5 million edges in London.
 
-## Technical Solution
+## Source code
 
 
 ### Backend
@@ -63,7 +63,7 @@ Brightpath finds walking routes through the city that are well lit, avoiding dar
 
 Steps taken to create backend
 
-1. Get a dump of London data from [Open Street Map](http://download.geofabrik.de/europe/great-britain/england/greater-london.html)
+1. Get a dump of London data from Open Street Map
 2. Convert OSM format to geojson.
 3. Clean geojson to remove dark pathways.
 4. [Write algorithm](https://github.com/mfbx9da4/brightpath-backend/blob/master/parse-geojson.go#L43) to load geojson into graph representation in memory in Go.
