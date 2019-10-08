@@ -21,7 +21,7 @@
 
 ## Mission
 
-To provide the safest walking route between two locations.
+To provide the safest well lit walking route between two locations.
 
 ## Problem
 
