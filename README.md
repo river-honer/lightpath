@@ -30,7 +30,11 @@ To provide the safest walking route between two locations.
 
 ## Blogs
 
+These were written as a follow up to the hackathon about our experience.
+
 - [My first Hackathon as a UX/UI Designer, (Aristos)](https://medium.com/@aristos.michaelides/my-first-hackathon-as-a-ux-ui-designer-d7fbd7c34602)
+- [Route finder app in Golang, (Quynh)](https://medium.com/@dataqween/route-finder-app-100-days-of-golang-day-10-20-bb5f61e21535)
+
 
 
 ## Presentation 
@@ -53,9 +57,9 @@ Brightpath finds walking routes through the city that are well lit, avoiding dar
 ## Technical Solution
 
 
-### [Backend github repository](https://github.com/mfbx9da4/brightpath-backend)
+### Backend
 
-Built in Go, hosted on heroku. https://brightpath.herokuapp.com
+[Backend github repository](https://github.com/mfbx9da4/brightpath-backend). Built in Go, hosted on heroku. https://brightpath.herokuapp.com
 
 Steps taken to create backend
 
@@ -68,25 +72,30 @@ Steps taken to create backend
 7. Write [A\* routing algorithm](https://github.com/mfbx9da4/brightpath-backend/blob/master/graph.go#L164) to find shortest path between two nodes in optimal time.
 8. Write [unit tests](https://github.com/mfbx9da4/brightpath-backend/blob/master/routing_test.go) and test cases for shortest path edge cases.
 
-### [Frontend 1 github repository](https://github.com/mfbx9da4/brightpath-frontend)
+### Frontend 1
 
-[Hosted on firebase](https://brightpath-fe.web.app), written in Vanilla JS. Originally written for testing purposes. Uses mapbox for map. Connects to backend hosted on [heroku](https://brightpath.herokuapp.com/).
+- [Frontend 1 github repository](https://github.com/mfbx9da4/brightpath-frontend)
+- [Hosted on firebase](https://brightpath-fe.web.app).
+- Written in Vanilla JS. 
+- Originally written for testing purposes. 
+- Uses mapbox for map. 
+- Connects to backend hosted on [heroku](https://brightpath.herokuapp.com/).
 
-### [Frontend 2 github repository](https://github.com/river-honer/lightpath)
+### Frontend 2
 
-Uses vuejs
-
+- [Frontend 2 github repository](https://github.com/river-honer/lightpath)
+- Uses vuejs
 - Uses mapbox geolocation API to get start and end destination.
 - Uses leaflet to render map.
 - Connects to backend hosted on [heroku](https://brightpath.herokuapp.com/)
 
-### Hackathon topic you used
-
-Accessibility & Community
 
 ## Design Proposal
 
-https://www.behance.net/gallery/86223243/BrightPath-Safe-route-finder
+We put together some [high fidelity mockups](https://www.behance.net/gallery/86223243/BrightPath-Safe-route-finder) of what the app could look like later on.
+
+<img src="https://user-images.githubusercontent.com/1690659/66382447-1c04b880-e9b3-11e9-8748-ee4ae7fb345f.gif" alt="" height="450" />
+
 
 ## Run Backend
 
@@ -104,3 +113,7 @@ yarn install
 yarn start
 
 ```
+
+## Hackathon topic you used
+
+Accessibility & Community.
