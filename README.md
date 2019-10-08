@@ -50,11 +50,11 @@ These were written as a follow up to the hackathon about our experience.
 
 Brightpath finds walking routes through the city that are well lit, avoiding dark pathways. Later we could incorporate many other kinds of data such as safe checkpoints trivially. The core technical challenge was wrangling the data and writing our own custom routing algorithm. For this hackathon we used data about whether a street is lit or not from [Open Street Map](<[https://www.openstreetmap.org/#map=10/51.4835/-0.1265](https://www.openstreetmap.org/#map=10/51.4835/-0.1265)>). Later we could incorporate official [UK gov data about street lighting](https://data.gov.uk/search?q=Street+Light) or even incorporate satellite imaging data.
 
-[To use the routing in action, click any two locations on the map.](https://brightpath-fe.web.app) Note this is limited to London because of the limitations of heroku free plan. While we did optimize for space complexity there are over 5 million edges in London.
+[To test the routing algorithm in the wild, click any two locations on the map of London.](https://brightpath-fe.web.app) Note this is limited to London because of the limitations of heroku free plan. While we did optimize for space complexity there are over 5 million edges in London.
 
 ### Our approach
 
-As a society we all need to be more conscious and critical of apps that ‘think for us’, and the data they use.  Our MVP has focused on using brightness as an objective measure for how safe one might feel.  Other ‘objective’ metrics we considered for the future include shop density, heat maps and traffic.  Not only would this stop ‘new’ software from perpetuating bias that we as humans are trying to unravel, our app also gives the user the opportunity to take a moment to decide what metrics they believe relates the closest to safety. 
+Our MVP has focused on using brightness as an objective measure for how safe one might feel. As a society we all need to be more conscious and critical of apps that ‘think for us’, and the data they use. Other ‘objective’ metrics we considered for the future include shop density, heat maps and traffic. We strive to give the power back to the user and allow them to select the safety metrics which are right for them.
 
 
 ## Source code
@@ -102,7 +102,7 @@ We put together some [high fidelity mockups](https://www.behance.net/gallery/862
 
 ## How it relates to Accessibility and Community
 
-- Our solution makes travel more accessible for everyone.  Our solution does not discriminate - it is for anyone that does not currently feel safe enough to go out at night (whether they are in a different continent, country, city or even an area they are not used to).  These can be individuals with ‘protected characteristics’ under the Equality Act (such as those that are disabled such as partially visually impaired, those with visible differences (such as ethnic minorities or gender (in the widest sense)) and invisible differences (such as LGBQT+)), but it can also be for any one else that feels vulnerable.
+- Our solution makes travel more accessible for everyone. We made sure to inlcude minorities which are often overlooked. Our solution does not discriminate - it is for anyone that does not currently feel safe enough to go out at night (whether they are in a different continent, country, city or even an area they are not used to).  These can be individuals with ‘protected characteristics’ under the Equality Act (such as those that are disabled such as partially visually impaired, those with visible differences (such as ethnic minorities or gender) and invisible differences (such as LGBQT+)), but it can also be for any one else that feels vulnerable.
 
 - Our solution also empowers users to engage more with the local community.  For example, from our research there are a number of travellers who will ‘go out at night’, however they will use taxis to get from A to B because they do not feel safe to walk from the hotel to the venue (and/or back again).  I’m sure we all have stories of having some of the best nights when wander freely around a local area, meeting locals serendipitously.  Our app gives more people the opportunity to have impromptu connections with the local community, in more locations.
 
