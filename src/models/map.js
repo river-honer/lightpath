@@ -22,7 +22,7 @@ export default class Map extends L.Map {
       minZoom: 0,
       maxZoom: 17,
       type: 'png',
-      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>',
+      attribution: 'Map tiles by <a href="//stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>',
     });
     basemap.addTo(this);
     this.setView([51.505, -0.09], 13);
@@ -30,7 +30,9 @@ export default class Map extends L.Map {
 
   drawRoute(route) {
     L.geoJSON(route.geojson, routeStyle).addTo(this);
-    this.drawStartEndPoints([route.startPoint, route.endPoint]);
+    if (route.startPoint && route.endPoint) {
+      this.drawStartEndPoints([route.startPoint, route.endPoint]);
+    }
   }
 
   drawStartEndPoints(startEndPoints) {

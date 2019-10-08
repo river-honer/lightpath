@@ -1,33 +1,43 @@
 <template>
-  <v-container>
-    <div v-if="messages.length > 0">
-      <v-alert
-        v-for="message in messages"
-        v-model="message.display"
-        :key="message.key"
-        :type="message.type"
-        :dismissible="true"
-      >{{ message.content }}</v-alert>
+    <div>
+        <v-card>
+          <v-container>
+            <alerts
+              :messages="messages"
+            />
+            <input-fields
+              :user-coords="userCoords"
+              v-on:submit-form="getData"
+              v-on:message="makeMessage"
+            />
+          </v-container>
+        </v-card>
+
+        <map-view
+          :user-coords="userCoords"
+          :data="mapData"
+          v-on:message="makeMessage"
+        />
     </div>
-    <input-fields :user-coords="userCoords" v-on:submit-form="getData" v-on:message="makeMessage" />
-    <map-view :user-coords="userCoords" :data="data" v-on:message="makeMessage" />
-  </v-container>
 </template>
 
 <script>
-import InputFields from "./InputFields";
-import MapView from "./MapView";
-import Route from "../models/route";
-import Webapi from "../webapi";
+import InputFields from './InputFields';
+import MapView from './MapView';
+import Alerts from './Alerts';
+import Route from '../models/route';
+import Webapi from '../webapi';
 
 export default {
   name: "home-page",
   components: {
     InputFields,
-    MapView
+    MapView,
+    Alerts,
   },
   data: () => ({
-    data: undefined,
+    mapData: undefined,
+    distance: null,
     userCoords: null,
     messages: []
   }),
@@ -37,11 +47,12 @@ export default {
   methods: {
     async getData(params) {
       try {
-        const bodyJson = await Webapi.findPath(params);
-        this.data = new Route(bodyJson);
-      } catch (err) {
-        console.error("err", err);
-        this.makeMessage({ type: "error", content: "Could not find route" });
+        const bodyJson = await Webapi.findPath(params)
+        this.distance = bodyJson.distance;
+        this.mapData = new Route(bodyJson.data);
+      }
+      catch {
+        this.makeMessage({type: 'error', content: 'Could not find route'})
       }
     },
     async getUserCoords() {

@@ -1,4 +1,4 @@
-const API_URL = 'http://wetravel-be.herokuapp.com';
+const API_URL = 'http://brightpath.herokuapp.com';
 const FINDPATH_API_URL = `${API_URL}/findpath`;
 
 export default class Webapi {
