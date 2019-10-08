@@ -45,16 +45,17 @@ These were written as a follow up to the hackathon about our experience.
 <img src="https://user-images.githubusercontent.com/1690659/66381704-bb28b080-e9b1-11e9-95aa-8fe8bb799f0f.png" alt="" width="400" />
 ](https://docs.google.com/presentation/d/e/2PACX-1vQI5T6knTUv9CPph-cnrhaS_v2JavzzSXZUsJ3H7ZK7uYJaJCTFg4jkwZA7ZjEFGw/pub?start=false&loop=false&delayms=3000)
 
-### Our approach
-
-As a society we all need to be more conscious and critical of apps that ‘think for us’, and the data they use.  Our MVP has focused on using brightness as an objective measure for how safe one might feel.  Other ‘objective’ metrics we considered for the future include shop density, heat maps and traffic.  Not only would this stop ‘new’ software from perpetuating bias that we as humans are trying to unravel, our app also gives the user the opportunity to take a moment to decide what metrics they believe relates the closest to safety. 
-
 
 ## Solution
 
 Brightpath finds walking routes through the city that are well lit, avoiding dark pathways. Later we could incorporate many other kinds of data such as safe checkpoints trivially. The core technical challenge was wrangling the data and writing our own custom routing algorithm. For this hackathon we used data about whether a street is lit or not from [Open Street Map](<[https://www.openstreetmap.org/#map=10/51.4835/-0.1265](https://www.openstreetmap.org/#map=10/51.4835/-0.1265)>). Later we could incorporate official [UK gov data about street lighting](https://data.gov.uk/search?q=Street+Light) or even incorporate satellite imaging data.
 
 [To use the routing in action, click any two locations on the map.](https://brightpath-fe.web.app) Note this is limited to London because of the limitations of heroku free plan. While we did optimize for space complexity there are over 5 million edges in London.
+
+### Our approach
+
+As a society we all need to be more conscious and critical of apps that ‘think for us’, and the data they use.  Our MVP has focused on using brightness as an objective measure for how safe one might feel.  Other ‘objective’ metrics we considered for the future include shop density, heat maps and traffic.  Not only would this stop ‘new’ software from perpetuating bias that we as humans are trying to unravel, our app also gives the user the opportunity to take a moment to decide what metrics they believe relates the closest to safety. 
+
 
 ## Source code
 
@@ -67,10 +68,10 @@ Steps taken to create backend
 
 1. Get a dump of London data from Open Street Map
 2. Convert OSM format to geojson.
-3. Clean geojson to remove dark pathways.
+3. [Clean geojson](https://github.com/mfbx9da4/brightpath-backend/blob/master/geojson-cleaner/geojson-cleaner.go) to remove dark pathways.
 4. [Write algorithm](https://github.com/mfbx9da4/brightpath-backend/blob/master/parse-geojson.go#L43) to load geojson into graph representation in memory in Go.
 5. Create Go API server.
-6. Write algorithm for finding closest node two api source and output destination.
+6. Write algorithm for [finding closest known](https://github.com/mfbx9da4/brightpath-backend/blob/master/graph.go#L136) node to user requested start and end coordinates.
 7. Write [A\* routing algorithm](https://github.com/mfbx9da4/brightpath-backend/blob/master/graph.go#L164) to find shortest path between two nodes in optimal time.
 8. Write [unit tests](https://github.com/mfbx9da4/brightpath-backend/blob/master/routing_test.go) and test cases for shortest path edge cases.
 
