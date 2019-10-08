@@ -10,9 +10,9 @@
 - Your live location will be updated regularly if you are walking or cycling.
 
 [
-<img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3036f386223243.5d932aa627487.png" alt="" data-canonical-src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3036f386223243.5d932aa627487.png" height="345" />
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3036f386223243.5d932aa627487.png" alt="" data-canonical-src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3036f386223243.5d932aa627487.png" width="420" height="345" />
 ](https://brightpath-fe.web.app)[
-<img src="https://user-images.githubusercontent.com/1690659/66380361-30df4d00-e9af-11e9-8579-b569220ddea1.gif" alt="brightpath-demo" data-canonical-src="https://user-images.githubusercontent.com/1690659/66380361-30df4d00-e9af-11e9-8579-b569220ddea1.gif" height="345" />
+<img src="https://user-images.githubusercontent.com/1690659/66380361-30df4d00-e9af-11e9-8579-b569220ddea1.gif" alt="brightpath-demo" data-canonical-src="https://user-images.githubusercontent.com/1690659/66380361-30df4d00-e9af-11e9-8579-b569220ddea1.gif" width="420" height="345" />
 ](https://brightpath-fe.web.app)
 
 ## Mission
