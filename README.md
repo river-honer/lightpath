@@ -1,14 +1,18 @@
 # Brightpath
 
-Click a start and end point anywhere on the map of London.
+## Demo
+
+Click two points anywhere on the map of London.
+
+
 [![button_demo](https://user-images.githubusercontent.com/1690659/66333882-c63afc80-e92f-11e9-8768-1fcdd4411359.png)](https://brightpath-fe.web.app)
 
 [
-![brightpath](https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3036f386223243.5d932aa627487.png)
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3036f386223243.5d932aa627487.png" alt="" data-canonical-src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3036f386223243.5d932aa627487.png" width="200" />
 ](https://brightpath-fe.web.app)
 
 [
-![brightpath-demo](https://user-images.githubusercontent.com/1690659/66332818-807d3480-e92d-11e9-9c07-a35f045ef92e.gif)
+<img src="https://user-images.githubusercontent.com/1690659/66332818-807d3480-e92d-11e9-9c07-a35f045ef92e.gif" alt="" data-canonical-src="https://user-images.githubusercontent.com/1690659/66332818-807d3480-e92d-11e9-9c07-a35f045ef92e.gif" width="300" />
 ](https://brightpath-fe.web.app)
 
 [![button_demo](https://user-images.githubusercontent.com/1690659/66333882-c63afc80-e92f-11e9-8768-1fcdd4411359.png)](https://brightpath-fe.web.app)
@@ -31,11 +35,11 @@ Brightpath finds walking routes through the city that are well lit, avoiding dar
 
 ## Technical Solution
 
-[Backend github repository](https://github.com/mfbx9da4/brightpath-backend)
-[Frontend 1 github repository](https://github.com/mfbx9da4/brightpath-frontend)
-[Frontend 2 github repository](https://github.com/river-honer/lightpath)
+- 
+- 
+- 
 
-### Backend
+### [Backend github repository](https://github.com/mfbx9da4/brightpath-backend)
 
 Built in Go, hosted on heroku. https://brightpath.herokuapp.com
 
@@ -50,16 +54,17 @@ Steps taken to create backend
 7. Write [A\* routing algorithm](https://github.com/mfbx9da4/brightpath-backend/blob/master/graph.go#L164) to find shortest path between two nodes in optimal time.
 8. Write [unit tests](https://github.com/mfbx9da4/brightpath-backend/blob/master/routing_test.go) and test cases for shortest path edge cases.
 
-### Frontend 1
+### [Frontend 1 github repository](https://github.com/mfbx9da4/brightpath-frontend)
 
 [Hosted on firebase](https://brightpath-fe.web.app), written in Vanilla JS. Originally written for testing purposes. Uses mapbox for map. Connects to backend hosted on [heroku](https://brightpath.herokuapp.com/).
 
-### Frontend 2
+### [Frontend 2 github repository](https://github.com/river-honer/lightpath)
 
 Uses vuejs
 
 - Uses mapbox geolocation API to get start and end destination.
 - Uses leaflet to render map.
+- Connects to backend hosted on [heroku](https://brightpath.herokuapp.com/)
 
 ### Hackathon topic you used
 
