@@ -38,6 +38,7 @@ These were written as a follow up to the hackathon about our experience.
 
 - [My first Hackathon as a UX/UI Designer, (Aristos)](https://medium.com/@aristos.michaelides/my-first-hackathon-as-a-ux-ui-designer-d7fbd7c34602)
 - [Route finder app in Golang, (Quynh)](https://medium.com/@dataqween/route-finder-app-100-days-of-golang-day-10-20-bb5f61e21535)
+- [LinkedIn post, (Aristos)](https://www.linkedin.com/posts/aristos-michaelides-0639b593_last-weekend-i-participated-in-the-global-activity-6584769414229557248-rPaP/)
 
 
 
