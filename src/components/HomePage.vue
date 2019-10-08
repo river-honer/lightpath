@@ -1,39 +1,33 @@
 <template>
-    <div>
-        <v-card>
-          <v-container>
-            <alerts
-              :messages="messages"
-            />
-            <input-fields
-              :user-coords="userCoords"
-              v-on:submit-form="getData"
-              v-on:message="makeMessage"
-            />
-          </v-container>
-        </v-card>
-
-        <map-view
+  <div>
+    <v-card>
+      <v-container>
+        <alerts :messages="messages" />
+        <input-fields
           :user-coords="userCoords"
-          :data="mapData"
+          v-on:submit-form="getData"
           v-on:message="makeMessage"
         />
-    </div>
+      </v-container>
+    </v-card>
+
+    <map-view :user-coords="userCoords" :data="mapData" v-on:message="makeMessage" />
+  </div>
 </template>
 
 <script>
-import InputFields from './InputFields';
-import MapView from './MapView';
-import Alerts from './Alerts';
-import Route from '../models/route';
-import Webapi from '../webapi';
+import InputFields from "./InputFields";
+import MapView from "./MapView";
+import Alerts from "./Alerts";
+import Route from "../models/route";
+import Webapi from "../webapi";
 
 export default {
   name: "home-page",
   components: {
     InputFields,
     MapView,
-    Alerts,
+    Alerts
   },
   data: () => ({
     mapData: undefined,
@@ -47,12 +41,12 @@ export default {
   methods: {
     async getData(params) {
       try {
-        const bodyJson = await Webapi.findPath(params)
+        const bodyJson = await Webapi.findPath(params);
+        console.log("bodyJson", bodyJson);
         this.distance = bodyJson.distance;
         this.mapData = new Route(bodyJson.data);
-      }
-      catch {
-        this.makeMessage({type: 'error', content: 'Could not find route'})
+      } catch {
+        this.makeMessage({ type: "error", content: "Could not find route" });
       }
     },
     async getUserCoords() {
