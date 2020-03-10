@@ -1,5 +1,7 @@
 # Brightpath
 
+**Retrospective** This is the submission for the 2019 Kiwi Travel Hackathon in London, where it won first place! Looking back, I love that the last commits were "trying to fix frontend".
+
 ## Demo
 
 ### Using the demo
