@@ -1,4 +1,4 @@
-# Brightpath
+# LightPath
 
 **Retrospective** This is the submission for the 2019 Kiwi Travel Hackathon in London, where it won first place! Looking back, I love that the last commits were "trying to fix frontend".
 
@@ -56,7 +56,7 @@ These were written as a follow up to the hackathon about our experience.
 
 ## Solution
 
-Brightpath finds walking routes through the city that are well lit, avoiding dark pathways. Later we could incorporate many other kinds of data such as safe checkpoints trivially. The core technical challenge was wrangling the data and writing our own custom routing algorithm. For this hackathon we used data about whether a street is lit or not from [Open Street Map](<[https://www.openstreetmap.org/#map=10/51.4835/-0.1265](https://www.openstreetmap.org/#map=10/51.4835/-0.1265)>). Later we could incorporate official [UK gov data about street lighting](https://data.gov.uk/search?q=Street+Light) or even incorporate satellite imaging data.
+LightPath finds walking routes through the city that are well lit, avoiding dark pathways. Later we could incorporate many other kinds of data such as safe checkpoints trivially. The core technical challenge was wrangling the data and writing our own custom routing algorithm. For this hackathon we used data about whether a street is lit or not from [Open Street Map](<[https://www.openstreetmap.org/#map=10/51.4835/-0.1265](https://www.openstreetmap.org/#map=10/51.4835/-0.1265)>). Later we could incorporate official [UK gov data about street lighting](https://data.gov.uk/search?q=Street+Light) or even incorporate satellite imaging data.
 
 [To test the routing algorithm in the wild, click any two locations on the map of London.](https://brightpath-fe.web.app) Note this is limited to London because of the limitations of heroku free plan. While we did optimize for space complexity there are over 5 million edges in London.
 
